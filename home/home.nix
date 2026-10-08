@@ -36,8 +36,10 @@
       hyprshot
       slurp
       grim
+      gopls
+      go
+      xournalpp
    ];
-
    home.pointerCursor = {
       enable = true;
       gtk.enable = true;
@@ -48,10 +50,10 @@
 
    gtk = {
       enable = true;
-      iconTheme = {
-         package = pkgs.tela-circle-icon-theme.override { colorVariants = [ "red" ]; };
-         name = "Tela-circle-red";
-      };
+#      iconTheme = {
+#         package = pkgs.tela-circle-icon-theme.override { colorVariants = [ "red" ]; };
+#         name = "Tela-circle-red";
+#      };
       gtk4 = {
          enable = true;
          theme.name = "gruvbox-dark";
@@ -59,10 +61,10 @@
             name = "JetBrainsMono Nerd Font";
             size = 13;
          };
-         iconTheme = {
-            package = pkgs.tela-circle-icon-theme.override { colorVariants = [ "red" ]; };
-            name = "Tela-circle-red";
-         };
+#         iconTheme = {
+#            package = pkgs.tela-circle-icon-theme.override { colorVariants = [ "red" ]; };
+#            name = "Tela-circle-red";
+#         };
       };
    };
 

@@ -19,10 +19,19 @@
       nixosConfigurations.kamputar = nixpkgs.lib.nixosSystem {
          specialArgs = { inherit inputs; };
          modules = [
-            ./nixos/configuration.nix
+            ./hosts/kamputar/configuration.nix
             inputs.nix-flatpak.nixosModules.nix-flatpak
          ];
       };		
+
+      nixosConfigurations.x270 = nixpkgs.lib.nixosSystem {
+         specialArgs = { inherit inputs; };
+         modules = [
+            ./hosts/x270/configuration.nix
+            inputs.nix-flatpak.nixosModules.nix-flatpak
+         ];
+      };		
+
       homeConfigurations."mitra" = home-manager.lib.homeManagerConfiguration {
          extraSpecialArgs = { inherit inputs; };
          pkgs = nixpkgs.legacyPackages.x86_64-linux;

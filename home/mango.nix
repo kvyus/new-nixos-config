@@ -5,13 +5,13 @@
       systemd.enable = true;
 
       autostart_sh = ''
-	 swaybg -i ~/Downloads/yahwe.png &
+	 swaybg -i ~/.dotfiles/home/wallpapers/wallhaven-rqyd8j.png &
          waybar &	
       '';
 
       settings = {
 
-         monitorrule = "name:HDMI-A-1,width:1920,height:1080,refresh:100,vrr:0";
+         monitor_rule = "name:HDMI-A-1,width:1920,height:1080,refresh:100,vrr:0";
 
          circle_layout="scroller";
 
@@ -23,22 +23,21 @@
    
          #FOCUS
          focus_on_activate = 0;
-         sloppyfocus = 0;
-         warpcursor = 0;
+         sloppy_focus = 0;
+	 warp_cursor = 0;
 
          #VISUAL
-         borderpx = 2;
-         gappih = 3;
-         gappiv = 3;
+         border_px = 2;
+         gap_inner_horizontal = 3;
+         gap_inner_vertical = 3;
 
-         gappoh = 7;
-         gappov = 7;
+         gap_outer_horizontal = 7;
+         gap_outer_vertical = 7;
 
          border_radius = 0;
 
-         focuscolor = "0xc5c9c5ff";
-         bordercolor = "0x393836ff";
-         urgentcolor = "0xc4746eff";
+         focus_color = "0xc5c9c5ff";
+         border_color = "0x393836ff";
 
          animations = 0;
 
@@ -106,17 +105,6 @@
          ];
 
          #RULES
-         tagrule = [
-            "id:1,layout_name:scroller"
-            "id:2,layout_name:scroller"
-            "id:3,layout_name:scroller"
-            "id:4,layout_name:scroller"
-            "id:5,layout_name:scroller"
-            "id:6,layout_name:scroller"
-            "id:7,layout_name:scroller"
-            "id:8,layout_name:scroller"
-            "id:9,layout_name:scroller"
-         ];
       };
    };
 }

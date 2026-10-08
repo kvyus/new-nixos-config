@@ -64,6 +64,7 @@
       enable32Bit = true;
    };
 
+   virtualisation.waydroid.enable = true;
    programs.dconf.enable = true;
 
    programs.steam = {
