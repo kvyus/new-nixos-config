@@ -6,13 +6,16 @@
 
       autostart_sh = ''
 	 swaybg -i ~/.dotfiles/home/wallpapers/wallhaven-rqyd8j.png &
-         waybar &	
+         waybar &
+	 swayidle &	
       '';
 
       settings = {
 
-         monitor_rule = "name:HDMI-A-1,width:1920,height:1080,refresh:100,vrr:0";
-
+         monitor_rule = [
+  "name:HDMI-A-1,width:1920,height:1080,refresh:100,vrr:0"
+  "name:eDP-1,width:1920,height:1080,refresh:60,vrr:1,scale:1.3"
+];
          circle_layout="scroller";
 
          #INPUT
