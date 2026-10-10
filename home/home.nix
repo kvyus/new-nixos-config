@@ -90,6 +90,16 @@
       enableFishIntegration = true;
    };
 
+   services.swayidle = {
+      enable = true;
+      timeouts = [
+      	  {
+		timeout = 600;
+		command = "${pkgs.systemd}/bin/systemctl suspend";
+	  }
+      ];
+   };
+
    programs.home-manager.enable = true;
  
 } 
