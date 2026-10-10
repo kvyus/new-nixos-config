@@ -11,6 +11,7 @@
             modules-left = [
                "ext/workspaces"
                "pulseaudio"
+	       "battery"
             ];
 
             modules-center = [
@@ -25,6 +26,11 @@
             "clock" = {
                tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
                format-alt = "{:%Y-%m-%d}";
+            };
+
+            "battery" = {
+               format = "BAT:{capacity}%";
+	       format-charging = "CHG:{capacity}%";
             };
 
 	    "ext/workspaces" = {
@@ -108,7 +114,10 @@
          }
 
          #clock,
-         #battery,
+         #battery {
+           background-color: transparent;
+           color: #c5c9c5;
+         }
          #cpu,
          #memory,
          #disk,
